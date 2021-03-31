@@ -1,0 +1,15 @@
+/* 公共左浮动 */
+.float_left{
+    float: left;
+}
+
+/* 宽度1200 左右居中 */
+.width_center_1200{
+    width: 1200px;
+    margin:0 auto;
+}
+.width_center_1200:after{
+    display: block;
+    clear:both;
+    content:'';
+}

@@ -12,6 +12,12 @@ const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
 const env = require('../config/prod.env')
+const SkeletonWebpackPlugin = require('vue-skeleton-webpack-plugin')
+// inject skeleton content(DOM & CSS) into HTML
+    new SkeletonWebpackPlugin({
+      webpackConfig: require('./webpack.skeleton.conf'),
+      quiet: true
+    })
 
 const webpackConfig = merge(baseWebpackConfig, {
   module: {
